@@ -1,0 +1,22 @@
+name: "Start appcenter build"
+description: "This action will start the appcenter build of the specified app"
+author: "Pascal Herms"
+branding:
+  icon: "check"
+  color: "green"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+inputs:
+  organization:
+    description: "Appcenter organization or user"
+    required: true
+  application:
+    description: "The application appcenter should build"
+    required: true
+  branch:
+    description: "The branch that appcenter should build the application for"
+    required: true
+  token:
+    description: "The usertoken or App token that should be used to authenticate"
+    required: true
