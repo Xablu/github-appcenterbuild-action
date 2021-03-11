@@ -17,6 +17,6 @@ inputs:
   branch:
     description: "The branch that appcenter should build the application for"
     required: true
-  token:
+  appcentertoken:
     description: "The usertoken or App token that should be used to authenticate"
     required: true
