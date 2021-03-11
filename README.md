@@ -24,11 +24,11 @@ name: Workflow name
 jobs:
   AppcenterBuildTrigger:
     name: Appcenter Build Trigger
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main #have a look at this
     - name: Appcenter trigger
-      uses: pherms/github-appcenterbuild-action
+      uses: xablu/github-appcenterbuild-action
       with:
         appcentertoken: ${{ secrets.APPCENTERTOKEN }}
         organization: your organization name in appcenter
@@ -36,3 +36,5 @@ jobs:
         branch: the github branch you want to build
 ```
 Create a secret in you repository's secrets configuration called APPCENTERTOKEN and paste your appcenter token in there as a value.
+
+You can add additional branches or remove branches under the push or pull_request blocks.

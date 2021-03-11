@@ -1,6 +1,6 @@
 name: "Start appcenter build"
 description: "This action will start the appcenter build of the specified app"
-author: "Pascal Herms"
+author: "Pascal Herms | Xablu"
 branding:
   icon: "check"
   color: "green"
