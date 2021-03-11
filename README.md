@@ -13,7 +13,13 @@ You have to make sure you have:
 The Github workflow is usually declared in .github/workflow/main.yml.
 
 ```yaml
-on: push
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
 name: Workflow name
 jobs:
   AppcenterBuildTrigger:
