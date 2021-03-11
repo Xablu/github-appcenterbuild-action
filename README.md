@@ -24,9 +24,9 @@ jobs:
     - name: Appcenter trigger
       uses: pherms/github-appcenterbuild-action
       with:
-        token: ${{ secrets.APPCENTER_TOKEN }}
+        appcentertoken: ${{ secrets.APPCENTERTOKEN }}
         organization: your organization name in appcenter
         application: the application name in appcenter
         branch: the github branch you want to build
 ```
-Create a secret in you repository's secrets configuration called APPCENTER_TOKEN and paste your appcenter token in there as a value.
+Create a secret in you repository's secrets configuration called APPCENTERTOKEN and paste your appcenter token in there as a value.
