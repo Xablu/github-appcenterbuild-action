@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+name: Workflow name
+jobs:
+  AppcenterBuildTrigger:
+    name: Appcenter Build Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main #have a look at this
+    - name: Appcenter trigger
+      uses: xablu/github-appcenterbuild-action
+      with:
+        appcentertoken: ${{ secrets.APPCENTERTOKEN }}
+        organization: your organization name in appcenter
+        application: the application name in appcenter
+        branch: the github branch you want to build
