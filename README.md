@@ -26,7 +26,7 @@ jobs:
     name: Appcenter Build Trigger
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main #have a look at this
+    - uses: actions/checkout@v2
     - name: Appcenter trigger
       uses: xablu/github-appcenterbuild-action
       with:
